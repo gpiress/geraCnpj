@@ -1,0 +1,49 @@
+<html>
+<head>
+    <title>Gera CNPJ</title>
+
+    <!-- Vendor stylesheets -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body ng-app="gera-cnpj">
+    <div class="container-fluid" style="padding-top: 20px;">
+        <div class="row">
+            <div class="col-md-offset-4 col-md-4">
+                <div ng-controller="IndexController as IndexCtrl">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Gerador de CNPJ</h3>
+                        </div>
+                        <div class="panel-body" style="text-align: center;">
+                            <h3 id="cnpj">{{ IndexCtrl.cnpj | prettifyCnpj }}</h3>
+                            <button class="btn btn-primary" ng-click="IndexCtrl.novoCnpj()">
+                                Gera novo
+                            </button>
+                            <button class="btn btn-warning" ngclipboard data-clipboard-target="#cnpj">
+                                <i class="fa fa-clipboard"></i> Copy to clipboard
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- vendor stuff -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/clipboard/dist/clipboard.min.js"></script>
+
+    <!-- angular and 3rd party modules -->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/ngclipboard/dist/ngclipboard.min.js"></script>
+
+    <!-- my app scripts -->
+    <script src="app.js"></script>
+
+    <script src="services/CNPJService.js"></script>
+
+    <script src="controllers/IndexController.js"></script>
+</body>
+</html>
