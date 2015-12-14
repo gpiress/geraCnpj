@@ -31,7 +31,6 @@ angular.module('gera-cnpj').service('CNPJService', function () {
         }
 
         var soma = calculaSomaCnpj(cnpj);
-
         var resto = soma % 11;
 
         if (resto < 2) {

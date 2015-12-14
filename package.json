@@ -6,7 +6,14 @@
   "dependencies": {
     "bootstrap": "^3.3.6"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.15",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-jasmine": "^0.3.6",
+    "karma-phantomjs-launcher": "^0.2.1",
+    "phantomjs": "^1.9.19"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

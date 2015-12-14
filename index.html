@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Gera CNPJ</title>
+    <title>Gera CNPJ e CPF</title>
 
     <!-- Vendor stylesheets -->
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -28,6 +28,27 @@
                 </div>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-md-offset-4 col-md-4">
+                <div ng-controller="IndexController as IndexCtrl">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Gerador de CPF</h3>
+                        </div>
+                        <div class="panel-body" style="text-align: center;">
+                            <h3 id="cpf">{{ IndexCtrl.cpf | prettifyCPF }}</h3>
+                            <button class="btn btn-primary" ng-click="IndexCtrl.novoCPF()">
+                                Gera novo
+                            </button>
+                            <button class="btn btn-warning" ngclipboard data-clipboard-target="#cpf">
+                                <i class="fa fa-clipboard"></i> Copy to clipboard
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- vendor stuff -->
@@ -43,6 +64,7 @@
     <script src="app.js"></script>
 
     <script src="services/CNPJService.js"></script>
+    <script src="services/CPFService.js"></script>
 
     <script src="controllers/IndexController.js"></script>
 </body>
