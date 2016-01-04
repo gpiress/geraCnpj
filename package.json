@@ -15,7 +15,8 @@
     "phantomjs": "^1.9.19"
   },
   "scripts": {
-    "test": "karma start"
+    "test": "karma start",
+    "lint": "jscs services controllers tests"
   },
   "author": "",
   "license": "ISC"
