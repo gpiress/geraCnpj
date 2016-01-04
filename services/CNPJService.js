@@ -23,7 +23,7 @@ angular.module('gera-cnpj').service('CNPJService', function () {
         }
 
         return cnpj;
-    }
+    };
 
     this.geraPrimeiroVerificador = function (cnpj) {
         if (cnpj.length < 12) {
@@ -54,7 +54,7 @@ angular.module('gera-cnpj').service('CNPJService', function () {
         }
 
         return 11 - resto;
-    }
+    };
 
     function calculaSomaCnpj(cnpj) {
         var soma = 0;

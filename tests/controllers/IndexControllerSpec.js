@@ -20,7 +20,7 @@ describe('IndexController', function () {
 
             inject(function (_$controller_) {
                 indexController = _$controller_('IndexController');
-            })
+            });
         });
 
         it('should ask the service for a new CNPJ', function () {
@@ -54,7 +54,7 @@ describe('IndexController', function () {
 
             inject(function (_$controller_) {
                 indexController = _$controller_('IndexController');
-            })
+            });
         });
 
         it('should ask the CPFService for a new CPF', function () {

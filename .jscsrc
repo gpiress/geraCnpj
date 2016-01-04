@@ -1,0 +1,31 @@
+{
+	"validateIndentation": 4,
+	"disallowMultipleSpaces": true,
+	"requireSpaceAfterLineComment": true,
+	"requireSpaceAfterBinaryOperators": true,
+	"requireBlocksOnNewline": {
+		"includeComments": true
+	},
+	"requireSemicolons": true,
+	"requireSpaceBetweenArguments": true,
+	"requireSpacesInForStatement": true,
+	"requireSpacesInFunction": {
+	    "beforeOpeningCurlyBrace": true
+	},
+	"requireSpaceAfterLineComment": true,
+	"requireSpaceAfterKeywords": [
+	    "do",
+	    "for",
+	    "if",
+	    "else",
+	    "switch",
+	    "case",
+	    "try",
+	    "catch",
+	    "void",
+	    "while",
+	    "with",
+	    "return",
+	    "typeof"
+	],
+}
