@@ -7,16 +7,16 @@ angular.module('gera-cnpj').controller('IndexController', ['CNPJService', 'CPFSe
 
     this.novoCnpj = function () {
         this.cnpj = this.CNPJService.geraCnpj();
-    }
+    };
 
     this.novoCPF = function () {
         this.cpf = this.CPFService.geraCPF();
-    }
+    };
 
     this.init = function () {
         this.novoCnpj();
         this.novoCPF();
-    }
+    };
 
     this.init();
 

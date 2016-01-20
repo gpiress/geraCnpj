@@ -9,7 +9,7 @@ angular.module('gera-cnpj').service('CPFService', function () {
         cpf += segundoVerificador;
 
         return cpf;
-    }
+    };
 
     this.geraCPFParcial = function () {
         var parcial = '';
@@ -20,7 +20,7 @@ angular.module('gera-cnpj').service('CPFService', function () {
         }
 
         return parcial;
-    }
+    };
 
     this.calculaDigito = function (partialCPF) {
         if (partialCPF.length < 9) {
@@ -32,7 +32,8 @@ angular.module('gera-cnpj').service('CPFService', function () {
         var teto = partialCPF.length + 1;
 
         for (var i = teto; i > 1; i--) {
-            var digito = parseInt(partialCPF[teto-i]);
+            var indice = teto - i;
+            var digito = parseInt(partialCPF[indice]);
 
             soma += (digito * i);
         }
@@ -44,7 +45,7 @@ angular.module('gera-cnpj').service('CPFService', function () {
         }
 
         return 11 - resto;
-    }
+    };
 
     return this;
 });
