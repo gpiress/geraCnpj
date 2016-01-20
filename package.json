@@ -19,7 +19,8 @@
   },
   "scripts": {
     "test": "karma start",
-    "lint": "jscs services controllers tests"
+    "lint": "jscs services controllers tests",
+    "build": "npm run lint && grunt"
   },
   "author": "",
   "license": "ISC"
