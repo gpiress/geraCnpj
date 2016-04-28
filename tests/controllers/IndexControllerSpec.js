@@ -34,7 +34,7 @@ describe('IndexController', function () {
         it('should update the CNPJ to the one informed by the service', function () {
             indexController.novoCnpj();
 
-            expect(indexController.cnpj).toEqual('novo cnpj');
+            expect(indexController.cnpj).toEqual('novo cpf');
         });
     });
 
